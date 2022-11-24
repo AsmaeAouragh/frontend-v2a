@@ -1,0 +1,56 @@
+# My Variables
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzdmNWM5MTlkZThmNDRlYTQyZTIwZDAiLCJpYXQiOjE2NjkyOTI0NDAsImV4cCI6MTY2OTU1MTY0MH0.YIETTnvh9xX23OjiB33lhwmA1B2-A_xS0XL3W1KwLAs
+### login
+POST https://backend-v2.onrender.com/api/user/login
+Content-Type: application/json
+
+{
+    "email": "asmae@asmae.fi",
+    "password": "Asmae12345@£"
+}
+
+### login
+POST https://backend-auth-tja0.onrender.com/api/user/login
+Content-Type: application/json
+
+{
+    "email": "mirja@mirja.fi",
+    "password": "45RFgh##@$"
+}
+
+
+
+### POST Request
+POST https://backend-auth-tja0.onrender.com/api/workouts/
+Content-Type: application/json
+Authorization: bearer {{token}}
+
+{
+    "title":"Sami Situps",
+    "reps":60,
+    "load":1
+}
+
+### POST Request
+POST https://backend-auth-tja0.onrender.com/api/workouts/
+Content-Type: application/json
+Authorization: bearer {{token}}
+
+{
+    "title":"Asmae A",
+    "reps":60,
+    "load":1
+}
+
+### GET Request
+GET https://backend-auth-tja0.onrender.com/api/workouts
+Content-Type: application/json
+Authorization: bearer {{token}}
+
+### GET Request
+GET https://backend-auth-tja0.onrender.com/api/workouts/637f1a91864850b73c867b39
+Content-Type: application/json
+Authorization: bearer {{token}}
+### DELET Request   (Authorization error)
+DELETE https://backend-auth-tja0.onrender.com/workouts/637f61f71aa22305f635b6e0
+Content-Type: {{contentType}}
